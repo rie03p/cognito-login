@@ -1,0 +1,28 @@
+{
+  "name": "Login Test Development",
+  "dockerComposeFile": ["../compose.yaml", "compose.yaml"],
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/login-test",
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "eamodio.gitlens",
+        "ms-azuretools.vscode-docker",
+        "Gruntfuggly.todo-tree",
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "sh",
+        "files.autoSave": "afterDelay"
+      }
+    }
+  },
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "Frontend Server",
+      "onAutoForward": "notify"
+    }
+  }
+}
